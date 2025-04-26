@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.user.mapper.StudentDormitoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.user.model.StudentDormitory">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="studentId" column="student_id" jdbcType="INTEGER"/>
+            <result property="dormitoryId" column="dormitory_id" jdbcType="INTEGER"/>
+            <result property="moveInDate" column="move_in_date" jdbcType="TIMESTAMP"/>
+            <result property="moveOutDate" column="move_out_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,student_id,dormitory_id,
+        move_in_date,move_out_date
+    </sql>
+
+    <select id="selectByStudentId" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM student_dormitory
+        WHERE student_id = #{studentId}
+    </select>
+</mapper>

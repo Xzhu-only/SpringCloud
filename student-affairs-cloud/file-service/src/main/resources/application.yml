@@ -1,0 +1,19 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: file-service
+  config:
+    import: nacos:shared-jdbc.yml
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+logging:
+  level:
+    com.example.student.affairs.file: debug
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss
+student-affairs:
+  upload:
+    path: D:/JavaScript/student-affairs/student-affairs-cloud/file-service/upload/ # 文件上传真实地址
+    access-path: /upload/** # 上传文件访问地址映射

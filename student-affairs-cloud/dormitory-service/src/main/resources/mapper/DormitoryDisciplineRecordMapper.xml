@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.dormitory.mapper.DormitoryDisciplineRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.dormitory.model.DormitoryDisciplineRecord">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="dormitoryId" column="dormitory_id" jdbcType="INTEGER"/>
+            <result property="incidentDate" column="incident_date" jdbcType="TIMESTAMP"/>
+            <result property="incidentType" column="incident_type" jdbcType="VARCHAR"/>
+            <result property="incidentDetails" column="incident_details" jdbcType="VARCHAR"/>
+            <result property="punishment" column="punishment" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,dormitory_id,incident_date,
+        incident_type,incident_details,punishment
+    </sql>
+</mapper>

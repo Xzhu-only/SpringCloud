@@ -1,0 +1,18 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: course-service
+  config:
+    import: nacos:shared-jdbc.yml
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml  # 配置XML映射文件位置
+  type-aliases-package: com.example.student.affairs.course.model  # 配置实体类包路径
+logging:
+  level:
+    com.example.student.affairs.course: debug
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss

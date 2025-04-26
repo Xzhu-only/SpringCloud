@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: dormitory-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      config:
+        file-extension: yml #文件后缀名
+        shared-configs: #共享配置
+          - dataId: shared-jdbc.yml #共享数据库配置
+            refresh: true
