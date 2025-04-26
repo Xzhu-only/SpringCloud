@@ -155,20 +155,6 @@
 
 - 以直观的方式呈现分析结果，如通过图表（柱状图、折线图、饼图等），方便不同用户角色查看和使用。
 
-![示例图片](media\image67.png)
-![示例图片](media\image68.png)
-![示例图片](media\image69.png)
-![示例图片](media\image70.png)
-![示例图片](media\image71.png)
-![示例图片](media\image72.png)
-![示例图片](media\image73.png)
-![示例图片](media\image74.png)
-![示例图片](media\image100.png)
-![示例图片](media\image104.png)
-![示例图片](media\image105.png)
-![示例图片](media\image106.png)
-![示例图片](media\image114.png)
-![示例图片](media\image113.png)
-![示例图片](media\image110.png)
-![示例图片](media\image111.png)
+![示例图片](media/image67.png) ![示例图片](media/image68.png) ![示例图片](media/image69.png) ![示例图片](media/image70.png) ![示例图片](media/image71.png) ![示例图片](media/image72.png) ![示例图片](media/image73.png) ![示例图片](media/image77.png) ![示例图片](media/image100.png) ![示例图片](media/image104.png) ![示例图片](media/image105.png) ![示例图片](media/image106.png) ![示例图片](media/image114.png) ![示例图片](media/image113.png) ![示例图片](media/image110.png) ![示例图片](media/image111.png)
+
 
