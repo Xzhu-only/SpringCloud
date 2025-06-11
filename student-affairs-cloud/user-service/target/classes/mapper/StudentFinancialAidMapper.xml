@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.user.mapper.StudentFinancialAidMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.user.model.StudentFinancialAid">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="studentId" column="student_id" jdbcType="INTEGER"/>
+            <result property="aidType" column="aid_type" jdbcType="VARCHAR"/>
+            <result property="aidAmount" column="aid_amount" jdbcType="DOUBLE"/>
+            <result property="semester" column="semester" jdbcType="VARCHAR"/>
+            <result property="aidSource" column="aid_source" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,student_id,aid_type,
+        aid_amount,semester,aid_source,
+        remark,state,create_time
+    </sql>
+</mapper>

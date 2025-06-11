@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.dormitory.mapper.DormitoryRepairRequestMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.dormitory.model.DormitoryRepairRequest">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="dormitoryId" column="dormitory_id" jdbcType="INTEGER"/>
+            <result property="requestDate" column="request_date" jdbcType="TIMESTAMP"/>
+            <result property="issueType" column="issue_type" jdbcType="VARCHAR"/>
+            <result property="issueDescription" column="issue_description" jdbcType="VARCHAR"/>
+            <result property="repairStatus" column="repair_status" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,dormitory_id,request_date,
+        issue_type,issue_description,repair_status
+    </sql>
+</mapper>

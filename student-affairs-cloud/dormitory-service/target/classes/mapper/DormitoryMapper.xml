@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.dormitory.mapper.DormitoryMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.dormitory.model.Dormitory">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="dormitoryName" column="dormitory_name" jdbcType="VARCHAR"/>
+            <result property="buildingName" column="building_name" jdbcType="VARCHAR"/>
+            <result property="capacity" column="capacity" jdbcType="INTEGER"/>
+            <result property="currentOccupancy" column="current_occupancy" jdbcType="INTEGER"/>
+            <result property="deleteFlag" column="delete_flag" jdbcType="TINYINT"/>
+            <result property="teacherId" column="teacher_id" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,dormitory_name,building_name,
+        capacity,current_occupancy,delete_flag,teacher_id,
+        create_time
+    </sql>
+
+    <select id="selectDormitoryById" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM dormitory
+        WHERE id = #{id}
+    </select>
+    <select id="selectListByTeacherId" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM dormitory
+        WHERE teacher_id = #{teacherId} AND delete_flag = 0
+    </select>
+</mapper>

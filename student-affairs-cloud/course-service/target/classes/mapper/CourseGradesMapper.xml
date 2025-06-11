@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.course.mapper.CourseGradesMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.course.model.CourseGrades">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="selectionId" column="selection_id" jdbcType="INTEGER"/>
+            <result property="grade" column="grade" jdbcType="DOUBLE"/>
+            <result property="gradeDate" column="grade_date" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,selection_id,grade,
+        grade_date
+    </sql>
+</mapper>

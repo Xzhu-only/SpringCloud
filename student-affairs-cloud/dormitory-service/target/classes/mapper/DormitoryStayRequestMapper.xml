@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.dormitory.mapper.DormitoryStayRequestMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.dormitory.model.DormitoryStayRequest">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="studentId" column="student_id" jdbcType="INTEGER"/>
+            <result property="dormitoryId" column="dormitory_id" jdbcType="INTEGER"/>
+            <result property="stayPeriodStart" column="stay_period_start" jdbcType="TIMESTAMP"/>
+            <result property="stayPeriodEnd" column="stay_period_end" jdbcType="TIMESTAMP"/>
+            <result property="reason" column="reason" jdbcType="VARCHAR"/>
+            <result property="approvalStatus" column="approval_status" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,student_id,dormitory_id,
+        stay_period_start,stay_period_end,reason,
+        approval_status
+    </sql>
+</mapper>

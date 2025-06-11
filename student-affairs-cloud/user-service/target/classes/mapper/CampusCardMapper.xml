@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.student.affairs.user.mapper.CampusCardMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.student.affairs.user.model.CampusCard">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="cardNumber" column="card_number" jdbcType="VARCHAR"/>
+            <result property="balance" column="balance" jdbcType="DOUBLE"/>
+            <result property="state" column="state" jdbcType="VARCHAR"/>
+            <result property="issuedDate" column="issued_date" jdbcType="TIMESTAMP"/>
+            <result property="lastRechargeDate" column="last_recharge_date" jdbcType="TIMESTAMP"/>
+            <result property="studentId" column="student_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,card_number,balance,
+        state,issued_date,last_recharge_date,
+        student_id
+    </sql>
+
+    <select id="selectByStudentId" resultMap="BaseResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM campus_card
+        WHERE student_id = #{studentId}
+    </select>
+</mapper>
